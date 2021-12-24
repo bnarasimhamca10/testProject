@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render without errors 1`] = `
+<div>
+  <h1>
+     Normatl CSS
+  </h1>
+  <button
+    className="sc-bdvvtL bzyOyq"
+  >
+    Styled Button A
+  </button>
+  <button
+    className="sc-bdvvtL cKdtGz"
+  >
+    Styled Button B
+  </button>
+  <div
+    className="red"
+  />
+</div>
+`;
