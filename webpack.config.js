@@ -1,7 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
+  devServer: {
+    port: 8001
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html"
@@ -10,24 +13,38 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
-            plugins: ['@babel/plugin-transform-runtime'],
-          },
+            presets: ["@babel/preset-react", "@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"]
+          }
         },
+        resolve: {
+          extensions: [".js", ".jsx"]
+        }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ],
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ],
+        include: /\.module\.css$/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+        exclude: /\.module\.css$/,
+      },
+    ]
   }
-}
+};

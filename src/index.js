@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/styles.scss';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
 ReactDOM.render(
-  <h1>Hello fromjs</h1>,
-  document.querySelector(
-    '#fromjs'
-  )
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector("#fromjs")
 );
-
