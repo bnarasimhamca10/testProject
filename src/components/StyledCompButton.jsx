@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 // Styled component named StyledButton
 const StyledButton = styled.button`
-  background-color: ${(props) => (props.bg === "black" ? "black" : "blue")};
+  background-color: 
+  ${(props) => (props.bg === "black" ? "black" : "blue")};
   font-size: 32px;
   color: white;
 `;
