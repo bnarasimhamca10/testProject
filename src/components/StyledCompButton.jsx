@@ -14,7 +14,7 @@ const StyledCompButton = () => {
       <StyledButton bg="black">
         Styled Button A</StyledButton>
       <StyledButton bg="blue">
-        Styled Button B</StyledButton>
+      Styled Button B</StyledButton>
     </>
   );
 };
