@@ -9,7 +9,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -40,8 +42,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
+    "react-styleguidist": "^11.1.7",
     "react-test-renderer": "^17.0.2",
     "sass-loader": "^12.4.0",
+    "source-map-explorer": "^2.5.2",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.3",
     "webpack": "^5.65.0",
@@ -100,5 +104,17 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
