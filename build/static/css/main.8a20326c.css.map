@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.8a20326c.css","mappings":"AAAA,oBACE,SACF,CCFA,EACE,UACF,CACA,KACE,WACF","sources":["styles/styles.module.css","styles/styles.css"],"sourcesContent":[".red {\n  color: red;\n}\n","* {\n  color: blue;\n}\n.red {\n  color: green;\n}\n"],"names":[],"sourceRoot":""}
